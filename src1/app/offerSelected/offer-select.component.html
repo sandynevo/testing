@@ -1,0 +1,122 @@
+<div class="panel panel-primary" *ngIf='offer'>
+    
+    <div class='panel-body'>
+     
+  
+
+
+<table class="table table-simple">
+ 
+    <tr>
+        
+        <td class="nowrap-content">
+          <div>{{offer.offerCode}}</div>
+          <div>APR</div>
+         </td>
+         <td scope="row"><div>{{offer.price | currency: 'USD':true:'1.2-2'}}</div>
+          <div>Payment</div>
+         </td>
+         <td scope="row"><citi-icon idStr="checkIcon" iconType="checkIcon" iconTextMessage=""></citi-icon>
+           
+         </td>
+    </tr>
+   
+   
+</table>
+<div class="accordion menu form" role="tablist" data-prevent-auto-scroll="true">
+                   
+                    <ul class="mainnav theme-light" aria-multiselectable="true">
+                      <li class="level1 parent" role="presentation">
+                          <div class="row ">
+                             <div class="form-group col-sm-8">
+                                 <div> Select Auto Pay</div>
+                              </div>
+                              <div class="form-groupcol-sm-4">
+                              <button type="button" class="btn btn-primary">Default</button>
+                              </div>
+                             
+			                  	</div>
+                        </li>
+                        <li class="level1 parent" role="presentation">
+                            <span class="category" role="presentation"><svg class="svg-arrow"></svg><span tabindex="0" role="tab" id="accordionHeader1-a" aria-expanded="false" aria-controls="accordionPanel1-a" aria-selected="false" data-title="Select to display" class="category-title">
+                             Citi Checking 687</span></span>
+                            <div class="accordionSubMenu" aria-labelledby="accordionHeader1-a" role="tabpanel" id="accordionPanel1-a" aria-hidden="true">
+                                <!-- start form content -->
+                           <div class="row">
+                                    <div class="form-group col-xs-12 col-lg-3 col-sm-8">
+                                        <label for="formEx2-1" id="formEx2-1Label" class="text-input-label">First Name</label>
+                                        <input type="text" id="formEx2-1" class="form-control" placeholder="First Name">
+                                    </div>
+                                    <div class="form-group col-xs-12 col-lg-3 col-sm-4">
+                                        <label for="formEx2-2" id="formEx2-2Label" class="text-input-label">Middle Initial (optional)</label>
+                                        <input type="text" id="formEx2-2" class="form-control" placeholder="Middle Initial (optional)">
+                                    </div>
+                                    <div class="form-group col-xs-12 col-lg-4 col-sm-8">
+                                        <label for="formEx2-3" id="formEx2-3Label" class="text-input-label">Last Name</label>
+                                        <input type="text" id="formEx2-3" class="form-control" placeholder="Last Name">
+                                    </div>
+                                    <div class="form-group col-xs-12 col-lg-2 col-sm-4">
+                                        <label class="select-box-label" for="formEx2-4" id="formEx2-4Label">Suffix</label>
+                                        <select id="formEx2-4" class="form-control">
+                                            <option value="" disabled="" selected="">Suffix</option>
+                                            <option value="1">II</option>
+                                            <option value="2">Esq.</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12 col-lg-12">
+                                        <label for="formEx2-5" id="formEx2-5Label" class="text-input-label">Email Address (name@example.com)</label>
+                                        <input type="text" id="formEx2-5" class="form-control formatted" data-format="name@example.com" placeholder="Email Address">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xs-12 col-lg-6 col-sm-6">
+                                        <label for="formEx2-6" id="formEx2-6Label" class="text-input-label">Social Security Number</label>
+                                        <input type="text" id="formEx2-6" class="form-control" placeholder="Social Security Number">
+                                    </div>
+                                    <div class="form-group col-xs-12 col-lg-6 col-sm-6">
+                                        <label class="text-input-label" for="formEx2-7" id="formEx2-7Label">Date of Birth (dd/mm/yyyy)</label>
+                                        <input type="text" value="" placeholder="Date of Birth dd/mm/yyyy" class="dateinput-simple form-control formatted" id="formEx2-7" data-format="dd/mm/yyyy" aria-describedby="formEx2-13Label">
+                                    </div>
+                                </div>
+                                <!-- end form content -->
+                        </div>
+                        </li>
+                      
+                   
+                    </ul>
+                </div>
+
+
+<fieldset>
+    <div class="row">
+        <div class="col-sm-10 col-xs-12">
+            <small class="terms-and-conditons">
+               <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Fusce felis lacus, sagittis vitae suscipit ac, euismod eget est. Fusce sed sapien non nulla cursus tempus facilisis in ligula. In malesuada, eros ut pharetra vestibulum, dui urna ultrices nisl, sed vulputate neque eros eget sem. Donec dictum mauris lectus, eu commodo libero rutrum eget. Etiam ut vehicula nibh. Nullam ac consectetur nunc, id scelerisque neque. Donec vel dignissim enim. Sed dignissim laoreet augue at vehicula.</p>
+            </small>
+            <div class="checkbox">
+                <input type="checkbox" id="tandc2" name="tandc2" value="true">
+                <label for="tandc2">I agree to the Terms &amp; Conditions</label>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+   <div class="row">
+    <div class="col-xs-12">
+        <div class="btn-inf-scoll-wrap">
+            <button type="button" class="btn btn-primary btn-inf-scroll" [routerLink]= "['/confirm']">Get Money</button>
+            <div class="jamp hidden" aria-hidden="true" role="alert">
+                <span class="img"></span>
+                <span class="message">Just a moment please.</span>
+            </div>
+        </div>
+    </div>
+</div> 
+
+     <a class='btn btn-default' (click)='OnBackClick()' style="width:80px">
+           Back 
+     </a> 
+    
+</div>

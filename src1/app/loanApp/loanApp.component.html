@@ -1,0 +1,31 @@
+
+
+
+<div class='panel panel-primary'>
+   <div class="">   {{pageTitle}}</div>
+   <citi-input idStr="input1" label="Input 1 Label" placeholder="{{offerobj | currency:'USD':true:'1.2-2' }}" type="text" name="input1name" size="large"></citi-input>
+
+    <div class='panel-body'>
+  
+     
+    
+        <div class='table-responsive'>
+            <table class='table' *ngIf='offerlist && offerlist.length'>
+         
+                <tbody>
+                    <tr *ngFor='let offer of offerlist'>
+                       
+                        <td>{{offer.offerCode}}</td>
+                        <td>{{offer.releaseDate}}</td>
+                        <td>{{offer.price | currency:'USD':true:'1.2-2' }}</td>
+                       
+                       <td><a [routerLink]= "['/offer',offer.offerId]">Select</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+</div>
